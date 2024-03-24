@@ -5,7 +5,7 @@ import {
   updateProduct,
   deleteProduct,
 } from "../controllers/productController";
-import { authenticateUserMiddleware } from "controllers/userController";
+import { authenticateUserMiddleware } from "../controllers/userController";
 
 const router = express.Router();
 
