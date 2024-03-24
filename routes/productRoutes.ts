@@ -5,6 +5,7 @@ import {
   updateProduct,
   deleteProduct,
 } from "../controllers/productController";
+import { authenticateUserMiddleware } from "controllers/userController";
 
 const router = express.Router();
 
@@ -12,12 +13,12 @@ const router = express.Router();
 router.get("/", getProducts);
 
 // POST /api/products
-router.post("/", createProduct);
+router.post("/", authenticateUserMiddleware, createProduct);
 
 // PUT /api/products/:id
-router.put("/:id", updateProduct);
+router.put("/:id", authenticateUserMiddleware, updateProduct);
 
 // DELETE /api/products/:id
-router.delete("/:id", deleteProduct);
+router.delete("/:id", authenticateUserMiddleware, deleteProduct);
 
 export default router;
