@@ -2,8 +2,11 @@
 v: 0
 micros:
   - name: mainstack-interview
-    src: ./dist/
+    src: ./
     engine: nodejs16
     primary: true
-    run: node app.js
-    public: true
+    commands:
+     - npm run build
+    include:
+     - dist
+    run: node dist/app.js
