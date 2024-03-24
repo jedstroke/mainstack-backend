@@ -1,0 +1,37 @@
+{
+  "name": "mainstack-interview",
+  "version": "1.0.0",
+  "description": "Assessment Interview for a Backend Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "ts-node './Tests/*.{ts}'",
+    "start": "node ./app.ts",
+    "dev": "nodemon ./app.ts",
+    "build": "tsc -p ."
+  },
+  "keywords": [],
+  "author": "Jed⚡hock",
+  "license": "ISC",
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "json"
+  ],
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mongoose": "^5.11.97",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.3",
+    "ts-node-dev": "^2.0.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6"
+  }
+}
