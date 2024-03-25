@@ -13,14 +13,13 @@ RUN npm install --production
 # Copy the rest of the application code to the working directory
 COPY . .
 
-# Copy .env file to the working directory
-COPY .env ./
+# Build TypeScript files
+RUN npm run build:deploy
 
-# Build TypeScript files (if needed)
-# RUN npm run build
+COPY .env ./dist/
 
 # Expose the port your app runs on
 EXPOSE 3000
 
 # Set environment variables from .env file
-CMD ["sh", "-c", "source .env && node dist/app.js"]
+CMD [ "node", "dist/app.js" ] 
