@@ -16,8 +16,6 @@ COPY . .
 # Build TypeScript files
 RUN npm run build:deploy
 
-COPY .env ./dist/
-
 # Expose the port your app runs on
 EXPOSE 3000
 

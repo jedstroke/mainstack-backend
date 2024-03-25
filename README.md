@@ -41,6 +41,11 @@ Before you begin, make sure you have the following installed on your machine:
     The server will start at http://localhost:<YOUR_PORT>.
 4. Import the API collection into Postman from the ```__api__``` dir see how requests are made.
 
+5. Or pull my Docker image
+    ```bash
+    docker run -d -p 3000:3000 -e MONGODB_URI="mongodb+srv://<username>:%<password>@<username>.9solltw.mongodb.net/store?retryWrites=true&w=majority" -e JWT_SECRET="lookhomewardangle" jedshock/mainstack-play-store:latest
+    ```
+
 ## Contributing
 Contributions are welcome! Fork the repository and submit a pull request with your changes.
 
