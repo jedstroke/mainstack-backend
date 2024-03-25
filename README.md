@@ -50,4 +50,4 @@ Before you begin, make sure you have the following installed on your machine:
 Contributions are welcome! Fork the repository and submit a pull request with your changes.
 
 ## License
-This project is licensed under the MIT License..
+This project is licensed under the MIT License.
