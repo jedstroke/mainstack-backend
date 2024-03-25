@@ -4,11 +4,15 @@ import dotenv from 'dotenv';
 import userRoutes from './routes/userRoutes';
 import productRoutes from './routes/productRoutes';
 import sanitizeMiddleware from "./middlewares/sanitizeMiddleware";
+import cors from "cors";
 
 // Load environment variables from .env file
 dotenv.config();
 
 const app: Application = express();
+
+// CORS
+app.use(cors());
 
 // Middleware for JSON parsing
 app.use(express.json());

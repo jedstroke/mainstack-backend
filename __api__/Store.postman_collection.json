@@ -1,0 +1,1073 @@
+{
+	"info": {
+		"_postman_id": "3a426be9-1bcf-45dc-a1fe-d2ea50cc5c63",
+		"name": "Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27002566"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"jedshock\",\r\n    \"email\": \"jeddygabriel@gmail.com\",\r\n    \"password\": \"@dodo09\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev_url}}/api/auth/register",
+							"host": [
+								"{{dev_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"jedshock\",\r\n    \"email\": \"jeddygabriel@gmail.com\",\r\n    \"password\": \"@dodo09\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev_url}}/api/auth/register",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-nMoFx54+czTntmSLXl3mqIsZV4A\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 23:49:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully\"\n}"
+						},
+						{
+							"name": "Any error/Registering the same user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"jedshock\",\r\n    \"email\": \"jeddygabriel@gmail.com\",\r\n    \"password\": \"@dodo09\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev_url}}/api/auth/register",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-deNl/Ga17UHwRgY/7cqV5P2yHrg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 23:50:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Error registering user\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// It also return HTTP-only cookies for authentication\r\n{\r\n    \"email\": \"jeddygabriel@gmail.com\",\r\n    \"password\": \"@dodo09\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev_url}}/api/auth/login",
+							"host": [
+								"{{dev_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"jeddygabriel@gmail.com\",\r\n    \"password\": \"@dodo09\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev_url}}/api/auth/login",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAwYmMxYmRhZTAzNjI4MGE4MTRhNjIiLCJpYXQiOjE3MTEzMjQ1NDl9.wdIIsKcyu-3gRJFIWKT8Iomqf9GKcVPqzpuvGAbK9pY; Path=/; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "194"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c2-Eo2xC6tC3em4Kbb/puCcTFKZtpw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 23:55:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAwYmMxYmRhZTAzNjI4MGE4MTRhNjIiLCJpYXQiOjE3MTEzMjQ1NDl9.wdIIsKcyu-3gRJFIWKT8Iomqf9GKcVPqzpuvGAbK9pY\"\n}"
+						},
+						{
+							"name": "Invalid password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"jeddygabriel@gmail.com\",\r\n    \"password\": \"@dodo09\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev_url}}/api/auth/login",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-PvqgqjiSsn+tQQwY1tAq1BFwX0M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 23:59:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid password\"\n}"
+						},
+						{
+							"name": "No user found/email doesn't exist/wrong crendential",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"jeddygabriel@gmail.co\",\r\n    \"password\": \"@dodo09\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev_url}}/api/auth/login",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-ZEVVcvtFhxKX/QUvVKqKxwGbbNA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 25 Mar 2024 00:02:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User not found\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Register, and login as a user."
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Return products or empty array",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev_url}}/api/products/",
+							"host": [
+								"{{dev_url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Returned products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev_url}}/api/products/",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "343"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"157-irgOXucfMFRrzDia7LKcJRo6pH4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 25 Mar 2024 02:26:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6600df36f6cf9b18d726f193\",\n        \"name\": \"Hololens\",\n        \"price\": 3000,\n        \"description\": \"Mixed reality headset\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6600dfdef6cf9b18d726f196\",\n        \"name\": \"Apple Vision\",\n        \"price\": 3500,\n        \"description\": \"Virtual reality headset\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6600e02ef6cf9b18d726f199\",\n        \"name\": \"Oculus\",\n        \"price\": 3500,\n        \"description\": \"Virtual reality headset\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "bearer",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjYwMGJjMWJkYWUwMzYyODBhODE0YTYyIiwiaWF0IjoxNzExMzMyMjU3LCJleHAiOjE3MTEzNDMwNTd9.JB7cl_fHjSULXUk25JqIDf4iXdqrEmfBzSIPi_y-8gc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jed XR\",\r\n    \"price\": \"$5500\",\r\n    \"description\": \"Virtual reality headset\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev_url}}/api/products/",
+							"host": [
+								"{{dev_url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "bearer",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjYwMGJjMWJkYWUwMzYyODBhODE0YTYyIiwiaWF0IjoxNzExMzMyMjU3LCJleHAiOjE3MTEzNDMwNTd9.JB7cl_fHjSULXUk25JqIDf4iXdqrEmfBzSIPi_y-8gc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Jed XR\",\r\n    \"price\": \"$5500\",\r\n    \"description\": \"Virtual reality headset\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev_url}}/api/products/",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-p+FlB2PLRyIluRU8Ann1OwDKBbk\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 25 Mar 2024 02:31:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product created successfully\"\n}"
+						},
+						{
+							"name": "Couldn't authorize product creation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "bearer",
+										"value": "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjYwMGJjMWJkYWUwMzYyODBhODE0YTYyIiwiaWF0IjoxNzExMzMyMjU3LCJleHAiOjE3MTEzNDMwNTd9.JB7cl_fHjSULXUk25JqIDf4iXdqrEmfBzSIPi_y-8gc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Jed XR\",\r\n    \"price\": \"$5500\",\r\n    \"description\": \"Virtual reality headset\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev_url}}/api/products/",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										""
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-ZEVVcvtFhxKX/QUvVKqKxwGbbNA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 25 Mar 2024 02:32:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "bearer",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjYwMGJjMWJkYWUwMzYyODBhODE0YTYyIiwiaWF0IjoxNzExMzMyMjU3LCJleHAiOjE3MTEzNDMwNTd9.JB7cl_fHjSULXUk25JqIDf4iXdqrEmfBzSIPi_y-8gc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{dev_url}}/api/products/6600e02ef6cf9b18d726f19",
+							"host": [
+								"{{dev_url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"6600e02ef6cf9b18d726f19"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "bearer",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjYwMGJjMWJkYWUwMzYyODBhODE0YTYyIiwiaWF0IjoxNzExMzMyMjU3LCJleHAiOjE3MTEzNDMwNTd9.JB7cl_fHjSULXUk25JqIDf4iXdqrEmfBzSIPi_y-8gc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{dev_url}}/api/products/6600e02ef6cf9b18d726f199",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"6600e02ef6cf9b18d726f199"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-a+2htZNpkCDaj0ausIFBiheaYZ4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 25 Mar 2024 02:39:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product deleted successfully\"\n}"
+						},
+						{
+							"name": "Wrong product ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "bearer",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjYwMGJjMWJkYWUwMzYyODBhODE0YTYyIiwiaWF0IjoxNzExMzMyMjU3LCJleHAiOjE3MTEzNDMwNTd9.JB7cl_fHjSULXUk25JqIDf4iXdqrEmfBzSIPi_y-8gc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{dev_url}}/api/products/6600e02ef6cf9b18d726f19",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"6600e02ef6cf9b18d726f19"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-FSrsi3mHAmYX/B3J0myVHWuUjbc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 25 Mar 2024 02:40:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Error deleting product\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "bearer",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjYwMGJjMWJkYWUwMzYyODBhODE0YTYyIiwiaWF0IjoxNzExMzMyMjU3LCJleHAiOjE3MTEzNDMwNTd9.JB7cl_fHjSULXUk25JqIDf4iXdqrEmfBzSIPi_y-8gc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// { name, price, description } any of this keys\r\n{ \"price\":\"$5000\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev_url}}/api/products/6600dfdef6cf9b18d726f196",
+							"host": [
+								"{{dev_url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"6600dfdef6cf9b18d726f196"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "bearer",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjYwMGJjMWJkYWUwMzYyODBhODE0YTYyIiwiaWF0IjoxNzExMzMyMjU3LCJleHAiOjE3MTEzNDMwNTd9.JB7cl_fHjSULXUk25JqIDf4iXdqrEmfBzSIPi_y-8gc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "// { name, price, description } any of this keys\r\n{ \"price\":\"$5000\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev_url}}/api/products/6600dfdef6cf9b18d726f196",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"6600dfdef6cf9b18d726f196"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-xkx5KN1R/KioLOUe4KCUrVOtulk\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 25 Mar 2024 02:51:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product updated successfully\"\n}"
+						},
+						{
+							"name": "Wrong product ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "bearer",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjYwMGJjMWJkYWUwMzYyODBhODE0YTYyIiwiaWF0IjoxNzExMzMyMjU3LCJleHAiOjE3MTEzNDMwNTd9.JB7cl_fHjSULXUk25JqIDf4iXdqrEmfBzSIPi_y-8gc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "// { name, price, description } any of this keys\r\n{ \"price\":\"$5000\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev_url}}/api/products/6600dfdef6cf9b18d726f19",
+									"host": [
+										"{{dev_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"6600dfdef6cf9b18d726f19"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-7rrUO+1yfgjo5MuGiOFX3/dDWVk\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 25 Mar 2024 02:53:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Error updating product\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Here: **create**, **update**, **delete** product which need authorization (**to be logged in**).  \nWhy **get** products can be view by any one, **without authorization**."
+		},
+		{
+			"name": "Hello World!",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "We are live 🎉",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{prod_url}}/",
+							"host": [
+								"{{prod_url}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-YnLkpcDw3BCDLk/DeXL1k0KvlPE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Mar 2024 23:27:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Welcome to the store API"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "dev_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "prod_url",
+			"value": "https://mainstack-backend.onrender.com",
+			"type": "string"
+		}
+	]
+}
