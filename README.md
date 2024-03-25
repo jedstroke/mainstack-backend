@@ -1,7 +1,7 @@
 <p align="center" width="100%">
     <img width="33%" src="https://media.licdn.com/dms/image/D560BAQGTIoqe_jjDQg/company-logo_200_200/0/1665776720976/themainstack_logo?e=1719446400&v=beta&t=r5Y5YCNTpJuJYHfKsIk7-gaoGRkg4L1P187_xR_E1Jo">
 </p>
-<p align="center">Maintack Backend Assessment Test</p>
+<p align="center">Mainsntack Backend Assessment Test</p>
 
 # Node.js Store Application
 
